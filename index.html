@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
             font-family: 'Arial', sans-serif;
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 30%, #8e24aa 50%, #d32f2f 70%, #1e3c72 100%);
@@ -20,8 +21,8 @@
             position: relative;
             overflow-x: hidden;
         }
-
         /* Snow Effect */
+        
         .snowflake {
             position: fixed;
             top: -10px;
@@ -35,31 +36,79 @@
             animation-play-state: running, running;
             color: #fff;
             font-size: 1em;
-            text-shadow: 0 0 5px rgba(255,255,255,0.8);
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
         }
-
+        
         @keyframes snowflakes-fall {
-            0% { top: -10%; }
-            100% { top: 100%; }
+            0% {
+                top: -10%;
+            }
+            100% {
+                top: 100%;
+            }
         }
-
+        
         @keyframes snowflakes-shake {
-            0%, 100% { transform: translateX(0); }
-            50% { transform: translateX(80px); }
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(80px);
+            }
         }
-
-        .snowflake:nth-of-type(0) { left: 1%; animation-delay: 0s, 0s; }
-        .snowflake:nth-of-type(1) { left: 10%; animation-delay: 1s, 1s; }
-        .snowflake:nth-of-type(2) { left: 20%; animation-delay: 6s, 0.5s; }
-        .snowflake:nth-of-type(3) { left: 30%; animation-delay: 4s, 2s; }
-        .snowflake:nth-of-type(4) { left: 40%; animation-delay: 2s, 2s; }
-        .snowflake:nth-of-type(5) { left: 50%; animation-delay: 8s, 3s; }
-        .snowflake:nth-of-type(6) { left: 60%; animation-delay: 6s, 2s; }
-        .snowflake:nth-of-type(7) { left: 70%; animation-delay: 2.5s, 1s; }
-        .snowflake:nth-of-type(8) { left: 80%; animation-delay: 1s, 0s; }
-        .snowflake:nth-of-type(9) { left: 90%; animation-delay: 3s, 1.5s; }
-
+        
+        .snowflake:nth-of-type(0) {
+            left: 1%;
+            animation-delay: 0s, 0s;
+        }
+        
+        .snowflake:nth-of-type(1) {
+            left: 10%;
+            animation-delay: 1s, 1s;
+        }
+        
+        .snowflake:nth-of-type(2) {
+            left: 20%;
+            animation-delay: 6s, 0.5s;
+        }
+        
+        .snowflake:nth-of-type(3) {
+            left: 30%;
+            animation-delay: 4s, 2s;
+        }
+        
+        .snowflake:nth-of-type(4) {
+            left: 40%;
+            animation-delay: 2s, 2s;
+        }
+        
+        .snowflake:nth-of-type(5) {
+            left: 50%;
+            animation-delay: 8s, 3s;
+        }
+        
+        .snowflake:nth-of-type(6) {
+            left: 60%;
+            animation-delay: 6s, 2s;
+        }
+        
+        .snowflake:nth-of-type(7) {
+            left: 70%;
+            animation-delay: 2.5s, 1s;
+        }
+        
+        .snowflake:nth-of-type(8) {
+            left: 80%;
+            animation-delay: 1s, 0s;
+        }
+        
+        .snowflake:nth-of-type(9) {
+            left: 90%;
+            animation-delay: 3s, 1.5s;
+        }
         /* Navigation */
+        
         .navbar {
             position: fixed;
             top: 0;
@@ -71,7 +120,7 @@
             box-shadow: 0 2px 20px rgba(142, 36, 170, 0.3);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-
+        
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -80,22 +129,22 @@
             align-items: center;
             padding: 0 2rem;
         }
-
+        
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
             background: linear-gradient(45deg, #64b5f6, #8e24aa, #d32f2f);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 20px rgba(255,255,255,0.5);
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
         }
-
+        
         .nav-links {
             display: flex;
             list-style: none;
             gap: 2rem;
         }
-
+        
         .nav-links a {
             color: white;
             text-decoration: none;
@@ -103,30 +152,30 @@
             padding: 0.5rem 1rem;
             border-radius: 25px;
         }
-
+        
         .nav-links a:hover {
             color: #ff4081;
             background: linear-gradient(45deg, rgba(100, 181, 246, 0.2), rgba(142, 36, 170, 0.2));
             box-shadow: 0 4px 15px rgba(255, 64, 129, 0.3);
         }
-
         /* Main Content */
+        
         .main-content {
             padding-top: 80px;
             min-height: calc(100vh - 80px);
         }
-
+        
         .section {
             display: none;
             padding: 4rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
-
+        
         .section.active {
             display: block;
         }
-
+        
         .section h1 {
             font-size: 3rem;
             margin-bottom: 2rem;
@@ -134,9 +183,9 @@
             background: linear-gradient(45deg, #64b5f6, #8e24aa, #ff4081);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-
+        
         .section h2 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
@@ -145,13 +194,13 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
         /* Home Section */
+        
         .hero {
             text-align: center;
             padding: 4rem 0;
         }
-
+        
         .hero-image {
             width: 200px;
             height: 200px;
@@ -164,27 +213,31 @@
             box-shadow: 0 10px 30px rgba(142, 36, 170, 0.4);
             animation: glow 2s ease-in-out infinite alternate;
         }
-
+        
         @keyframes glow {
-            from { box-shadow: 0 10px 30px rgba(142, 36, 170, 0.4); }
-            to { box-shadow: 0 15px 40px rgba(255, 64, 129, 0.6); }
+            from {
+                box-shadow: 0 10px 30px rgba(142, 36, 170, 0.4);
+            }
+            to {
+                box-shadow: 0 15px 40px rgba(255, 64, 129, 0.6);
+            }
         }
-
+        
         .hero p {
             font-size: 1.3rem;
             max-width: 600px;
             margin: 0 auto;
             opacity: 0.9;
         }
-
         /* Projects Section */
+        
         .project-controls {
             display: flex;
             gap: 1rem;
             margin-bottom: 2rem;
             justify-content: center;
         }
-
+        
         .btn {
             background: linear-gradient(45deg, #64b5f6, #8e24aa, #ff4081);
             color: white;
@@ -196,20 +249,20 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(142, 36, 170, 0.4);
         }
-
+        
         .btn:hover {
             background: linear-gradient(45deg, #42a5f5, #7b1fa2, #e91e63);
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(255, 64, 129, 0.5);
         }
-
+        
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
-
+        
         .project-card {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 15px;
@@ -219,13 +272,13 @@
             transition: all 0.3s ease;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
-
+        
         .project-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 40px rgba(142, 36, 170, 0.4);
             border: 1px solid rgba(255, 64, 129, 0.5);
         }
-
+        
         .project-image {
             width: 100%;
             height: 200px;
@@ -233,20 +286,20 @@
             border-radius: 10px;
             margin-bottom: 1rem;
         }
-
+        
         .project-card h3 {
             background: linear-gradient(45deg, #64b5f6, #8e24aa);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 0.5rem;
         }
-
+        
         .project-actions {
             display: flex;
             gap: 0.5rem;
             margin-top: 1rem;
         }
-
+        
         .edit-btn {
             background: #2196F3;
             color: white;
@@ -257,11 +310,11 @@
             transition: background 0.3s ease;
             font-size: 0.9rem;
         }
-
+        
         .edit-btn:hover {
             background: #1976D2;
         }
-
+        
         .delete-btn {
             background: #f44336;
             color: white;
@@ -272,12 +325,12 @@
             transition: background 0.3s ease;
             font-size: 0.9rem;
         }
-
+        
         .delete-btn:hover {
             background: #d32f2f;
         }
-
         /* Modal */
+        
         .modal {
             display: none;
             position: fixed;
@@ -289,7 +342,7 @@
             background: rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(5px);
         }
-
+        
         .modal-content {
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             margin: 5% auto;
@@ -297,9 +350,9 @@
             border-radius: 15px;
             width: 90%;
             max-width: 500px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
-
+        
         .close {
             color: #aaa;
             float: right;
@@ -307,21 +360,21 @@
             font-weight: bold;
             cursor: pointer;
         }
-
+        
         .close:hover {
             color: white;
         }
-
+        
         .form-group {
             margin-bottom: 1rem;
         }
-
+        
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
             color: #64b5f6;
         }
-
+        
         .form-group input,
         .form-group textarea {
             width: 100%;
@@ -332,55 +385,55 @@
             color: white;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
-
+        
         .form-group input::placeholder,
         .form-group textarea::placeholder {
             color: rgba(255, 255, 255, 0.6);
         }
-
         /* About Section */
+        
         .about-content {
             display: grid;
             grid-template-columns: 1fr 2fr;
             gap: 3rem;
             align-items: flex-start;
         }
-
+        
         .about-left {
             display: flex;
             flex-direction: column;
             gap: 2rem;
         }
-
+        
         .about-image {
             width: 100%;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(142, 36, 170, 0.4);
         }
-
+        
         .map-container {
             width: 100%;
             height: 300px;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             border: 2px solid rgba(255, 255, 255, 0.2);
         }
-
+        
         .map-container iframe {
             width: 100%;
             height: 100%;
             border: none;
             filter: hue-rotate(200deg) saturate(1.5);
         }
-
+        
         .skills {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
             gap: 1rem;
             margin-top: 2rem;
         }
-
+        
         .skill {
             background: linear-gradient(45deg, rgba(100, 181, 246, 0.3), rgba(142, 36, 170, 0.3));
             padding: 1rem;
@@ -389,19 +442,19 @@
             border: 1px solid rgba(255, 64, 129, 0.3);
             transition: all 0.3s ease;
         }
-
+        
         .skill:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(142, 36, 170, 0.4);
         }
-
         /* Contact Section */
+        
         .contact-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
         }
-
+        
         .contact-info {
             background: linear-gradient(135deg, rgba(100, 181, 246, 0.2), rgba(142, 36, 170, 0.2));
             padding: 2rem;
@@ -409,7 +462,7 @@
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 64, 129, 0.3);
         }
-
+        
         .contact-form {
             background: linear-gradient(135deg, rgba(142, 36, 170, 0.2), rgba(211, 47, 47, 0.2));
             padding: 2rem;
@@ -417,14 +470,14 @@
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 64, 129, 0.3);
         }
-
         /* Footer */
+        
         .footer {
             background: rgba(30, 60, 114, 0.95);
             padding: 3rem 0 1rem;
             margin-top: 4rem;
         }
-
+        
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
@@ -433,27 +486,27 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
         }
-
+        
         .footer-section h3 {
             background: linear-gradient(45deg, #64b5f6, #8e24aa);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 1rem;
         }
-
+        
         .footer-section p,
         .footer-section a {
             color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             line-height: 1.8;
         }
-
+        
         .footer-section a:hover {
             background: linear-gradient(45deg, #64b5f6, #ff4081);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
+        
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
@@ -461,14 +514,14 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: rgba(255, 255, 255, 0.6);
         }
-
+        
         .social-links {
             display: flex;
             gap: 1rem;
             justify-content: center;
             margin-top: 1rem;
         }
-
+        
         .social-links a {
             background: linear-gradient(45deg, rgba(100, 181, 246, 0.3), rgba(142, 36, 170, 0.3));
             padding: 0.5rem;
@@ -477,41 +530,38 @@
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 64, 129, 0.3);
         }
-
+        
         .social-links a:hover {
             background: linear-gradient(45deg, #64b5f6, #ff4081);
             transform: translateY(-2px) scale(1.1);
             box-shadow: 0 10px 25px rgba(142, 36, 170, 0.5);
         }
-
         /* Responsive */
+        
         @media (max-width: 768px) {
             .nav-links {
                 flex-direction: column;
                 gap: 1rem;
             }
-
             .about-content,
             .contact-content {
                 grid-template-columns: 1fr;
             }
-
             .hero h1 {
                 font-size: 2rem;
             }
-
             .project-controls {
                 flex-direction: column;
                 align-items: center;
             }
-
             .project-actions {
                 flex-direction: column;
             }
         }
     </style>
 </head>
-    <body>
+
+<body>
     <!-- Snow Effect -->
     <div class="snowflake">❄</div>
     <div class="snowflake">❅</div>
@@ -540,7 +590,7 @@
         <!-- Home Section -->
         <section id="home" class="section active">
             <div class="hero">
-                <img src="IMG_2733.PNG" alt="Ralph" class="hero-image">
+                <img src="PVSD20998.PNG" alt="Ralph" class="hero-image">
                 <h1>Welcome to Ralph's Portfolio</h1>
                 <p>I'm a passionate developer and designer creating innovative digital experiences. Explore my work and discover how I can bring your ideas to life through clean code and beautiful design.</p>
             </div>
@@ -564,20 +614,18 @@
                 <div class="about-left">
                     <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=400&fit=crop" alt="About Ralph" class="about-image">
                     <div class="map-container">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127155.56219820284!2d9.238436!3d4.153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10610d0d3b3c7b9b%3A0x7b8b3b3b3b3b3b3b!2sBuea%2C%20Cameroon!5e0!3m2!1sen!2s!4v1234567890123"
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="Buea, Cameroon Location">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127155.56219820284!2d9.238436!3d4.153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10610d0d3b3c7b9b%3A0x7b8b3b3b3b3b3b3b!2sBuea%2C%20Cameroon!5e0!3m2!1sen!2s!4v1234567890123" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Buea, Cameroon Location">
                         </iframe>
                     </div>
                 </div>
                 <div>
-                    <p>Hello! I'm Ralph, a dedicated web developer with a passion for creating exceptional digital experiences. With years of experience in both front-end and back-end development, I specialize in building responsive, user-friendly applications that solve real-world problems.</p>
-                    <p>My journey in technology started with a curiosity about how things work, and it has evolved into a career where I get to build solutions that make a difference. I believe in clean code, beautiful design, and the power of technology to transform businesses.</p>
+                    <p>Hello! I'm Ralph, a dedicated web developer with a passion for creating exceptional digital experiences. With years of experience in both front-end and back-end development, I specialize in building responsive, user-friendly applications
+                        that solve real-world problems.</p>
+                    <p>My journey in technology started with a curiosity about how things work, and it has evolved into a career where I get to build solutions that make a difference. I believe in clean code, beautiful design, and the power of technology
+                        to transform businesses.</p>
                     <p>📍 Based in the beautiful city of Buea, Cameroon, I work with clients globally, bringing innovative solutions to life from the heart of Africa. The map shows my exact location in this vibrant tech hub!</p>
-                    
+
                     <div class="skills">
                         <div class="skill">JavaScript</div>
                         <div class="skill">React</div>
@@ -602,7 +650,7 @@
                     <p><strong>Phone:</strong> +1 (555) 123-4567</p>
                     <p><strong>Location:</strong> New York, NY</p>
                     <p><strong>LinkedIn:</strong> linkedin.com/in/ralph</p>
-                    
+
                     <div class="social-links">
                         <a href="#">📧</a>
                         <a href="#">📱</a>
@@ -610,7 +658,7 @@
                         <a href="#">🐦</a>
                     </div>
                 </div>
-                
+
                 <div class="contact-form">
                     <h3>Send Message</h3>
                     <form>
@@ -666,7 +714,7 @@
                 <p>A showcase of creativity, technical expertise, and passion for digital innovation. Every project represents a journey of problem-solving and continuous learning.</p>
                 <p>Built with love and attention to detail, this portfolio demonstrates the intersection of functionality and beautiful design.</p>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Services</h3>
                 <p><a href="#">Web Development</a></p>
@@ -677,7 +725,7 @@
                 <p><a href="#">Database Design</a></p>
                 <p><a href="#">Technical Consulting</a></p>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Technologies</h3>
                 <p>Frontend: React, Vue.js, Angular, HTML5, CSS3, JavaScript ES6+</p>
@@ -686,7 +734,7 @@
                 <p>Cloud: AWS, Google Cloud, Azure, Docker, Kubernetes</p>
                 <p>Tools: Git, Webpack, Jest, Figma, Adobe Creative Suite</p>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Contact & Connect</h3>
                 <p>📧 ralph@portfolio.com</p>
@@ -699,7 +747,7 @@
                 <p><a href="#">Dribbble Designs</a></p>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <p>&copy; 2025 Ralph's Portfolio. All rights reserved. | Designed & Developed by Ralph | Privacy Policy | Terms of Service</p>
             <p>This website uses modern web technologies and follows best practices for performance, accessibility, and SEO optimization.</p>
@@ -715,36 +763,32 @@
         }
 
         // Projects Management
-        let projects = [
-            {
-                id: 1,
-                title: "E-Commerce Platform",
-                description: "A full-stack e-commerce solution with payment integration and admin dashboard.",
-                image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
-                tech: "React, Node.js, MongoDB, Stripe"
-            },
-            {
-                id: 2,
-                title: "Weather App",
-                description: "Real-time weather application with location-based forecasts and interactive maps.",
-                image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=250&fit=crop",
-                tech: "JavaScript, OpenWeather API, Chart.js"
-            },
-            {
-                id: 3,
-                title: "Task Management System",
-                description: "Collaborative project management tool with real-time updates and team collaboration features.",
-                image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop",
-                tech: "Vue.js, Firebase, Socket.io"
-            }
-        ];
+        let projects = [{
+            id: 1,
+            title: "E-Commerce Platform",
+            description: "A full-stack e-commerce solution with payment integration and admin dashboard.",
+            image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
+            tech: "React, Node.js, MongoDB, Stripe"
+        }, {
+            id: 2,
+            title: "Weather App",
+            description: "Real-time weather application with location-based forecasts and interactive maps.",
+            image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=250&fit=crop",
+            tech: "JavaScript, OpenWeather API, Chart.js"
+        }, {
+            id: 3,
+            title: "Task Management System",
+            description: "Collaborative project management tool with real-time updates and team collaboration features.",
+            image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop",
+            tech: "Vue.js, Firebase, Socket.io"
+        }];
 
         let editingProjectId = null;
 
         function loadProjects() {
             const grid = document.getElementById('projectsGrid');
             grid.innerHTML = '';
-            
+
             projects.forEach(project => {
                 const projectCard = document.createElement('div');
                 projectCard.className = 'project-card';
@@ -766,17 +810,17 @@
             const project = projects.find(p => p.id === id);
             if (project) {
                 editingProjectId = id;
-                
+
                 // Fill the form with existing data
                 document.getElementById('projectTitle').value = project.title;
                 document.getElementById('projectDescription').value = project.description;
                 document.getElementById('projectImage').value = project.image;
                 document.getElementById('projectTech').value = project.tech;
-                
+
                 // Update modal title and button text
                 document.getElementById('modalTitle').textContent = 'Edit Project';
                 document.getElementById('submitBtn').textContent = 'Update Project';
-                
+
                 // Open the modal
                 document.getElementById('projectModal').style.display = 'block';
             }
@@ -805,19 +849,21 @@
         // Handle form submission
         document.getElementById('projectForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             const projectData = {
                 title: document.getElementById('projectTitle').value,
                 description: document.getElementById('projectDescription').value,
                 image: document.getElementById('projectImage').value || 'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=400&h=250&fit=crop',
                 tech: document.getElementById('projectTech').value
             };
-            
+
             if (editingProjectId) {
                 // Update existing project
                 const projectIndex = projects.findIndex(p => p.id === editingProjectId);
                 if (projectIndex !== -1) {
-                    projects[projectIndex] = { ...projects[projectIndex], ...projectData };
+                    projects[projectIndex] = {...projects[projectIndex],
+                        ...projectData
+                    };
                 }
             } else {
                 // Add new project
@@ -827,7 +873,7 @@
                 };
                 projects.push(newProject);
             }
-            
+
             loadProjects();
             closeModal();
         });
@@ -846,4 +892,5 @@
         });
     </script>
 </body>
+
 </html>
